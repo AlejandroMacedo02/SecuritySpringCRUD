@@ -30,7 +30,7 @@ public class AdminController {
         return "/admin/home_admin";
     }
     
-    @GetMapping("")
+    @GetMapping("/show")
     public String showReserva(Model model){
         Iterable<ReservaEntity> reserva = reservaService.getReservas();
         model.addAttribute("reservas", reserva);

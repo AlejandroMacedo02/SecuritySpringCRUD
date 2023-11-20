@@ -6,7 +6,6 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.TurnoRepository;
 import kode.god.testsecurity.infrastructure.entity.TurnoEntity;
-import org.springframework.context.annotation.Lazy;
 
 /**
  *
@@ -14,9 +13,9 @@ import org.springframework.context.annotation.Lazy;
  */
 public class TurnoCrudImpl implements TurnoRepository{
     
-    private final TurnoCrud turnoCrud;
+    private final TurnoCrudRepository turnoCrud;
 
-    public TurnoCrudImpl(@Lazy TurnoCrud turnoCrud) {
+    public TurnoCrudImpl(TurnoCrudRepository turnoCrud) {
         this.turnoCrud = turnoCrud;
     }
 

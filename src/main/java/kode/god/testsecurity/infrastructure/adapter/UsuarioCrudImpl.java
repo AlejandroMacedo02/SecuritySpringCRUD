@@ -6,7 +6,6 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.UsuarioRepository;
 import kode.god.testsecurity.infrastructure.entity.UsuarioEntity;
-import org.springframework.context.annotation.Lazy;
 
 /**
  *
@@ -14,9 +13,9 @@ import org.springframework.context.annotation.Lazy;
  */
 public class UsuarioCrudImpl implements UsuarioRepository{
     
-    private final UsuarioCrud usuarioCrud;
+    private final UsuarioCrudRepository usuarioCrud;
 
-    public UsuarioCrudImpl(@Lazy UsuarioCrud usuarioCrud) {
+    public UsuarioCrudImpl(UsuarioCrudRepository usuarioCrud) {
         this.usuarioCrud = usuarioCrud;
     }
 

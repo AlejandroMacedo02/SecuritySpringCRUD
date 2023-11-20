@@ -6,7 +6,6 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.ReservaRepository;
 import kode.god.testsecurity.infrastructure.entity.ReservaEntity;
-import org.springframework.context.annotation.Lazy;
 
 /**
  *
@@ -14,9 +13,9 @@ import org.springframework.context.annotation.Lazy;
  */
 public class ReservaCrudImpl implements ReservaRepository{
     
-    private final ReservaCrud reservaCrud;
+    private final ReservaCrudRepository reservaCrud;
 
-    public ReservaCrudImpl(@Lazy ReservaCrud reservaCrud) {
+    public ReservaCrudImpl(ReservaCrudRepository reservaCrud) {
         this.reservaCrud = reservaCrud;
     }
 

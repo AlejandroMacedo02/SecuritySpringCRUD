@@ -4,15 +4,13 @@
  */
 package kode.god.testsecurity.infrastructure.adapter;
 
-import java.util.Optional;
-import kode.god.testsecurity.infrastructure.entity.UsuarioEntity;
+import kode.god.testsecurity.infrastructure.entity.ReservaEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author alejandromacedop
  */
-public interface UsuarioCrud extends CrudRepository<UsuarioEntity, Integer> {
-
-    Optional<UsuarioEntity> findByEmail(String Email);
+public interface ReservaCrudRepository extends CrudRepository<ReservaEntity, Integer>{
+    
 }

@@ -11,6 +11,6 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author alejandromacedop
  */
-public interface TurnoCrud extends CrudRepository<TurnoEntity, Integer>{
+public interface TurnoCrudRepository extends CrudRepository<TurnoEntity, Integer>{
     
 }

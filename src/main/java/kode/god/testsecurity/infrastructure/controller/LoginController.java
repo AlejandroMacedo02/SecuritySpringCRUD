@@ -4,9 +4,8 @@
  */
 package kode.god.testsecurity.infrastructure.controller;
 
-import jakarta.servlet.http.HttpSession;
+import kode.god.testsecurity.app.services.LoginService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,17 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author alejandromacedop
  */
 @Controller
-@RequestMapping("/home")
-public class HomeController {
+@RequestMapping("/login")
+public class LoginController {
+    
+    public final LoginService loginService;
 
-    @GetMapping
-    public String home(Model model, HttpSession httpSession) {
-
-        try {
-            model.addAttribute("id", httpSession.getAttribute("iduser").toString());
-        } catch (Exception e) {
-        }
-
-        return "home";
+    public LoginController(LoginService loginService) {
+        this.loginService = loginService;
     }
+    
+    
+    @GetMapping
+    public String login(){
+        return "login";
+    }
+    
 }
