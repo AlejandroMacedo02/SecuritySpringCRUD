@@ -6,11 +6,13 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.UsuarioRepository;
 import kode.god.testsecurity.infrastructure.entity.UsuarioEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author alejandromacedop
  */
+@Repository
 public class UsuarioCrudImpl implements UsuarioRepository{
     
     private final UsuarioCrudRepository usuarioCrud;

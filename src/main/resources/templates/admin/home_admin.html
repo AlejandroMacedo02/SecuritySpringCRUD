@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>Ecommerce Admin</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head th:insert = "~{admin/template_admin::head}">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div th:insert = "~{admin/template_admin::header}"></div>
+        <div class="container"><br>
+            <h1>WELCOME BOSS</h1>
+            <!--  <a class="btn btn-primary" th:onclick="guardarProducto"> Crear producto </a>-->
+            <a class="btn btn-dark mt-3"> Crear Reserva </a>
+
+
+        </div>
+
+        <div class="footer" th:insert = "~{admin/template_admin::footer}"></div>
+
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/metodo.js"></script>
+    <style>
+        .body{
+            position: relative;
+        }
+        .footer{
+            position: absolute;
+            bottom:0px;
+            height: 60px;
+            width: 100%;
+        }
+    </style>
+
 </html>

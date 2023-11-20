@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:insert ="~{user/template_user::head}"></head>
     <body>
-        <div>TODO write content</div>
+        <div th:insert ="~{user/template_user::header}" th:if="${id==null}"></div>
+        <div th:insert ="~{user/template_user::userlogger}" th:unless="${id==null}"></div>
+        <div class="container">
+            <header class="jumbotron my-4">
+                <strong><h1 class="display-3">Bienvenido gracias por la preferencia!</h1> 
+            </header>
+
+
+        </div>
+
     </body>
+    <div class="footer" th:insert ="~{user/template_user::footer}"></div>
 </html>
+<style>
+    .body{
+        position: relative;
+    }
+    .footer{
+        position: absolute;
+        bottom:0px;
+        height: 60px;
+        width: 100%;
+    }
+
+</style>

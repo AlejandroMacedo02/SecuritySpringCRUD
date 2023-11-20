@@ -6,11 +6,13 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.ReservaRepository;
 import kode.god.testsecurity.infrastructure.entity.ReservaEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author alejandromacedop
  */
+@Repository
 public class ReservaCrudImpl implements ReservaRepository{
     
     private final ReservaCrudRepository reservaCrud;

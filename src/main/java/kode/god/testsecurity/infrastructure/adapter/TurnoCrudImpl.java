@@ -6,11 +6,13 @@ package kode.god.testsecurity.infrastructure.adapter;
 
 import kode.god.testsecurity.app.repository.TurnoRepository;
 import kode.god.testsecurity.infrastructure.entity.TurnoEntity;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author alejandromacedop
  */
+@Repository
 public class TurnoCrudImpl implements TurnoRepository{
     
     private final TurnoCrudRepository turnoCrud;
