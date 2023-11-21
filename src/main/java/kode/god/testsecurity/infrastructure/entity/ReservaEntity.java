@@ -23,7 +23,7 @@ public class ReservaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private LocalDateTime fecha_reserva;
+    private LocalDateTime fecha;
     private Integer costo;
     private String horas;
     
@@ -37,9 +37,9 @@ public class ReservaEntity {
     public ReservaEntity() {
     }
 
-    public ReservaEntity(Integer id, LocalDateTime fecha_reserva, Integer costo, String horas, TurnoEntity turnoEntity, UsuarioEntity usuarioEntity) {
+    public ReservaEntity(Integer id, LocalDateTime fecha, Integer costo, String horas, TurnoEntity turnoEntity, UsuarioEntity usuarioEntity) {
         this.id = id;
-        this.fecha_reserva = fecha_reserva;
+        this.fecha = fecha;
         this.costo = costo;
         this.horas = horas;
         this.turnoEntity = turnoEntity;
@@ -54,12 +54,12 @@ public class ReservaEntity {
         this.id = id;
     }
 
-    public LocalDateTime getFecha_reserva() {
-        return fecha_reserva;
+    public LocalDateTime getFecha() {
+        return fecha;
     }
 
-    public void setFecha_reserva(LocalDateTime fecha_reserva) {
-        this.fecha_reserva = fecha_reserva;
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
     }
 
     public Integer getCosto() {
@@ -96,8 +96,12 @@ public class ReservaEntity {
 
     @Override
     public String toString() {
-        return "ReservaEntity{" + "id=" + id + ", fecha_reserva=" + fecha_reserva + ", costo=" + costo + ", horas=" + horas + ", turnoEntity=" + turnoEntity + ", usuarioEntity=" + usuarioEntity + '}';
+        return "ReservaEntity{" + "id=" + id + ", fecha=" + fecha + ", costo=" + costo + ", horas=" + horas + ", turnoEntity=" + turnoEntity + ", usuarioEntity=" + usuarioEntity + '}';
     }
+
+    
+
+    
     
     
 }

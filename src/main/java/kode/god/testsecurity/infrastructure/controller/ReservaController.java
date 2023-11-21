@@ -42,7 +42,7 @@ public class ReservaController {
         Iterable<TurnoEntity> turnos = turnoService.getTurnos();
         model.addAttribute("listTurnos", turnos);
         model.addAttribute("id", httpSession.getAttribute("iduser").toString());
-        return "user/create";
+        return "/user/create";
     }
 
     @PostMapping("/save-create")
