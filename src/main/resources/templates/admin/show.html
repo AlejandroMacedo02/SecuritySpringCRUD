@@ -26,7 +26,8 @@
                     <tr th:each="reserva: ${reservas}">
                         <td th:text="${reserva.fecha}"></td>
                         <td th:text="${reserva.horas}"></td>
-                        
+                        <td th:text="${reserva.turnoEntity.descripcion}"></td>
+                        <td th:text="${reserva.usuarioEntity.fullname}"></td>
                         <td th:text="${reserva.costo}"></td>
                         <td> <a class="btn btn-warning" >Editar</a></td>
                         <td> <a class="btn btn-danger" >Eliminar</a></td>
